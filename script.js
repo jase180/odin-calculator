@@ -12,14 +12,21 @@ function multiply(a,b) {
 }
 
 function countDecimals(n){
-    return n.toString().split('.')[1].length;
+    if (n.toString().includes(".")) {
+        return n.toString().split('.')[1].length;
+    } else{
+        return 0
+    }
+
 }
 function divide(a,b) {
     result = a/b;
     if (countDecimals(result) > 5) {
         result = result.toFixed(5)
+        return (result);
+    }else {
+        return (result);
     }
-    return (result);
 }
 
 function operate(op,a,b) {
